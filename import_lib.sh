@@ -1,0 +1,2 @@
+echo "arg1:$1 arg2:$2 arg3:$3"
+curl -k -u $1 -H "Content-Type:multipart/form-data" -X POST -F "importData=@./jsons/${3}.json" -F "variableValues=@./passwords.json" "${2}/api/apollo/objects/import?importPolicy=$4"
